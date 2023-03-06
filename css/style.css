@@ -48,8 +48,145 @@ body {
   text-transform: uppercase;
   padding: 43px 20px;
   height: 100px;
+  transition: all 0.3s;
 }
 .menu__link:hover {
   color: #fff;
   background-color: #131313;
+}
+
+.bike {
+  padding: 100px 0px 150px;
+}
+.bike__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.bike__column--slider {
+  flex-basis: 630px;
+  margin-left: 30px;
+  max-width: 630px;
+}
+.bike__title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+  margin: 70px 0 5px;
+}
+.bike__subtitle {
+  font-weight: 400;
+  margin: 0 0 60px;
+  font-size: 32px;
+  line-height: 39px;
+  color: #6F6F6F;
+}
+.bike__text {
+  margin: 0 0 20px;
+  max-width: 420px;
+}
+.bike__link {
+  margin-top: 80px;
+  display: inline-block;
+  width: 420px;
+  padding: 28px 81px;
+  background: #131313;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 1.1em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+.bike__list {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+.bike__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #131313;
+  max-width: 160px;
+  align-items: center;
+  min-height: 58px;
+}
+.bike__item-num {
+  text-transform: uppercase;
+  line-height: 1.21;
+  font-weight: 700;
+  font-size: 14px;
+}
+.bike__item-text {
+  line-height: 1.25;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 12px;
+  margin: auto 0;
+}
+
+.bike-slider iframe {
+  height: 400px;
+  width: 100%;
+}
+.bike-slider .slick-dots {
+  right: 0;
+  top: 50px;
+}
+
+.slick-dots {
+  position: absolute;
+}
+.slick-dots button:hover {
+  transition: all 0.3s;
+  background: #FF4040;
+}
+.slick-dots li + li {
+  padding-top: 10px;
+}
+.slick-dots button {
+  font-size: 0;
+  padding: 0;
+  border: none;
+  background-color: #131313;
+  width: 2px;
+  height: 25px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.slick-active button {
+  background: #FF4040;
+}
+
+.info {
+  margin-bottom: 150px;
+}
+.info__inner {
+  display: flex;
+}
+.info__img {
+  margin-right: 60px;
+  flex-basis: 570px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.info__list {
+  flex-basis: 490px;
+}
+.info__item:not(:last-child) {
+  padding-bottom: 50px;
+}
+.info__title {
+  font-size: 16px;
+  line-height: 1.18;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.info__text {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 450px;
 }
