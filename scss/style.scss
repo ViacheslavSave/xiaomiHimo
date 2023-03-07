@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -11,6 +14,9 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+p {
+  margin: 0;
 }
 body {
   font-family: 'Inter', sans-serif;
@@ -59,7 +65,7 @@ body {
 //?---------------------------------------------header--end----------------------------------------------------
 //?---------------------------------------------bike---------------------------------------------------------
 .bike {
-  padding: 100px 0px 150px;
+  padding: 100px 0px 0px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -100,6 +106,12 @@ body {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
+    transition: all .3s;
+    &:hover{
+      background-color: #FF4040;
+
+    }
+
   }
   &__list {
     display: flex;
@@ -179,7 +191,8 @@ body {
 //!----- info -----
 //?--------------------------------------------- info ---------------------------------------------------------
 .info {
-  margin-bottom: 150px;
+  padding-top: 150px;
+  margin-bottom: 50px;
   &__inner {
     display: flex;
   }
@@ -209,10 +222,253 @@ body {
   }
   &__text {
     font-size: 14px;
-line-height: 1.2;
+    line-height: 1.2;
     margin: 0;
     max-width: 450px;
   }
 }
 //?--------------------------------------------- info--media --------------------------------------------------
 //?--------------------------------------------- info--end ----------------------------------------------------
+//!----- characteristics -----
+//?--------------------------------------------- characteristics ---------------------------------------------------------
+.characteristics {
+  padding-top: 100px;
+  margin-bottom: 150px;
+  &__head {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+  }
+  &__inner {
+    display: flex;
+  }
+  &__items {
+    flex-basis: 570px;
+    margin-right: 60px;
+  }
+  &__list {}
+  &__list:not(:last-child) {
+    padding-bottom: 30px;
+  }
+  &__title {
+    padding: 2px 0 3px;
+    font-weight: 700;
+    line-height: 1.21;
+    text-transform: uppercase;
+    /* белый */
+    color: #FFFFFF;
+    background-color: #131313;
+    margin-bottom: 10px;
+  }
+  &__line {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  &__name {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  &__descr {
+    // flex-basis: 50%;padding-right: 25px;
+  }
+  &__img {
+    align-self: center;
+  }
+}
+//?--------------------------------------------- characteristics -- media ------------------------------------------------
+//?--------------------------------------------- characteristics -- end --------------------------------------------------
+//!----- slider -----
+//?--------------------------------------------- slider ---------------------------------------------------------
+.slider {
+  margin-bottom: 50px;
+  &__items {
+    padding-left: 50px;
+  }
+  &__item {
+    // margin-left: 50px;
+  }
+  .slick-dots {
+    top: 0;
+    left: 0;
+  }
+}
+//?--------------------------------------------- slider -- media ------------------------------------------------
+//?--------------------------------------------- slider -- end --------------------------------------------------
+//!----- price -----
+//?--------------------------------------------- price ---------------------------------------------------------
+.prise {
+  margin-bottom: 100px;
+  &__inner {
+    position: relative;
+  }
+}
+.form {
+  max-width: 420px;
+  &__title {
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 1.21;
+    text-transform: uppercase;
+  }
+  &__text {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  &__input-name,
+  &__input-phone {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #131313;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  &__input-name::placeholder,
+  &__input-phone::placeholder,
+  &__input-text {
+    color: #6F6F6F;
+    opacity: 0.5;
+  }
+  &__input-text {
+    margin-bottom: 10px;
+  }
+  &__label-box {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  &__label {}
+  &__input-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  &__input-radio:checked + &__bike {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__bike {
+    display: none;
+  }
+  &__bike-img {}
+  &__bike-prise {
+    font-size: 32px;
+    line-height: 1.21;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    transform: translate(-40%);
+    // left: 0;
+    // right: 0;
+    border: 1px solid #FF4040;
+    border-radius: 60%;
+    width: 220px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    span {
+      margin-top: 5px;
+      display: inline-block;
+      align-self: center;
+    }
+  }
+  &__bike-prise::after {
+    content: "";
+    top: 12px;
+    left: 0;
+    // left: -70px;
+    border: 1px solid #FF4040;
+    border-radius: 60%;
+    width: 220px;
+    height: 100px;
+    position: absolute;
+  }
+  &__radio-style {
+    border-radius: 30px;
+    width: 80px;
+    height: 12px;
+    cursor: pointer;
+  }
+  &__label:not(:last-child) {
+    margin-right: 28px;
+  }
+  &__radio-style--gray {
+    background: #6F6F6F;
+  }
+  &__radio-style--while {
+    background: #fff;
+    border: 1px solid #6F6F6F;
+  }
+  &__radio-style--red {
+    background: #FF4040;
+  }
+  &__btn {
+    cursor: pointer;
+    border: none;
+    padding: 28px 61px 28px 81px;
+    background: #131313;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 1.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: all .3s;
+    &:hover{
+      background-color: #FF4040;
+
+    }
+  }
+}
+//?--------------------------------------------- price -- media ------------------------------------------------
+//?--------------------------------------------- price -- end --------------------------------------------------
+//!----- footer -----
+//?--------------------------------------------- footer ---------------------------------------------------------
+.footer {
+  background-color: #131313;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  &__link {
+    text-decoration: underline;
+  }
+  &__social {}
+  &__social-image {}
+  &__social-link {}
+  &__social-link + &__social-link {
+    margin-left: 30px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contacts-link {
+    display: flex;
+    align-items: center;
+  }
+  &__contacts-link + &__contacts-link {
+    margin-top: 10px;
+  }
+  &__contacts-img:not(:last-child) {
+  
+  }
+  &__contacts-img {
+    margin-right: 10px;
+  }
+}
+//?--------------------------------------------- footer -- media ------------------------------------------------
+//?--------------------------------------------- footer -- end --------------------------------------------------
